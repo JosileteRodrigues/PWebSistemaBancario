@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+
+    <style>
+        html{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form{
+            max-width: 30%;
+        }
+
+        form div{
+            margin: .75rem;
+
+            display: flex;
+            align-items: center;
+        }
+
+        label, input {
+            font-size: 1.25rem;
+        }
+
+        input{
+            margin-left: 1rem;
+            border-radius: 5px;
+
+            padding: .25rem;
+        }
+
+        button{
+            padding: .5rem;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button{
+            margin-top: 1rem;
+            margin-left: 40%;
+            width: 30%;
+            background-color: rgb(13, 187, 13);
+        }
+
+        table {
+            margin-top: 1.5rem;
+        }
+
+        p button{
+            background-color: red;
+            margin-left: 1rem;
+
+            width: 2rem;
+        }
+        div{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastrar Clientes</h1>
+    <form>
+        <div class="name">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="cpf">
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf">
+        </div>
+        <div>
+            <label for="conta">Conta:</label>
+            <input type="text" name="conta" id="conta">
+        </div>
+        <button type="submit" onclick="clienteController.inserir(event)">Enviar</button>
+    </form>
+
+    <table>
+        <thead>
+        <tr>
+            <th>DATA DE CRIAÇÃO</th>
+            <th>NOME</th>
+            <th>CPF</th>
+            <th>CONTA</th>
+        </tr>
+        </thead>
+    </table>
+    <div class="clientes"></div>
+
+    <h1>Contas Existentes</h1>
+    <div class="contas"></div>
+
+
+    <script src="js/model/conta.js"></script>
+    <script src="js/model/conta-bonificada.js"></script>
+    <script src="js/model/poupanca.js"></script>
+    <script src="js/model/contas.js"></script>
+    <script src="js/model/clientes.js"></script>
+    <script src="js/model/cliente.js"></script>
+    <script src="js/controller/cliente-controller.js"></script>
+    <script src="js/controller/conta-controller.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
